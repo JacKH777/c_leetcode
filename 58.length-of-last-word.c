@@ -12,7 +12,8 @@ int lengthOfLastWord(char* s) {
     while (*s) {
         if (*s != ' ') {
             count++;
-        } else if (count > 0) {
+        } 
+        else if (count > 0) {
             his_count = count;
             count = 0;
         }
