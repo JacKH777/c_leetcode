@@ -49,6 +49,11 @@ void qsort(void *base, size_t nitems, size_t size, int (*compare)(const void *, 
 // 重點 : 十進制轉二進制的方法 
 ```
 
+- 第338題
+```c
+// 第191題的延伸
+```
+
 
 20240712  
 - 第67題
