@@ -8,6 +8,54 @@ https://github.com/youngyangyang04/leetcode-master
 
 
 # 時間紀錄
+&#10006; 表示沒寫出來   
+20240714
+- 第268題
+```c
+// 使用qsort進行排序，再找出缺失的值
+// 有更好的方法，EX.使用求和公式
+```
+
+- 第190題
+```c
+// 注意資料儲存方法要用 uint32_t
+// 不要使用 pow() 會比較慢(by ChatGPT)
+```
+
+- 第70題
+- 學習動態規劃  
+https://medium.com/技術筆記/演算法筆記系列-dynamic-programming-動態規劃-de980ca4a2d3
+```c
+// 感覺空間可以更少
+```
+
+- 第322題 &#10006;
+```c
+// 使用 Greedy ALG 
+// 可能不會找到最優解甚至是無解
+// 例子说明问题
+// 例如，假设硬币面值为 [1, 3, 4]，目标金额为 6。贪心算法会选择面值最大的硬币 4，然后剩下 2，再选择两个 1，共需要3枚硬币。而实际的最优解是选择两个 3，共需要2枚硬币。 (by ChatGPT)
+// 要使用動態規劃
+int compare(const void *a, const void *b){
+    return (*(int*)a - *(int*)b);
+}
+int coinChange(int* coins, int coinsSize, int amount) {
+    if(amount == 0) return 0;
+
+    qsort(coins, coinsSize, sizeof(int), compare);
+    int coin_count = 0;
+    for(int i = coinsSize - 1; i > -1; i--){
+        while(amount >= coins[i]){
+            amount -= coins[i];
+            coin_count ++;
+        }
+    }
+    if(amount == 0) return coin_count;
+    else return -1;
+}
+```
+![DP想法](image.png)
+
 20240713
 - 第121題
 ```c
