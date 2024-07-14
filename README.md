@@ -54,7 +54,7 @@ int coinChange(int* coins, int coinsSize, int amount) {
     else return -1;
 }
 ```
-![DP想法](image.png)
+![DP想法](./img/image.png)
 
 20240713
 - 第121題
