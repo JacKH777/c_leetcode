@@ -9,6 +9,30 @@ https://github.com/youngyangyang04/leetcode-master
 
 # 時間紀錄
 &#10006; 表示沒寫出來  
+20240720
+- 第377題 &#10006;
+```c
+// 要記得先做類型轉換(unsigned int *)malloc
+// malloc 函數返回的是 void* 類型的指針
+unsigned int *dp = (unsigned int *)malloc((target + 1) * sizeof(unsigned int));
+```
+
+- 第198題
+```c
+// 動態規劃
+```
+
+- 第213題 &#10006;
+```c
+// 198的延伸(當房屋環形排列的情況)
+```
+
+20240717
+- 第139題 &#10006;
+```c
+// 字串處理以及動態規劃
+```
+
 20240715
 - 第300題
 ```c
